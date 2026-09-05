@@ -110,6 +110,21 @@
 # output format: ex: 4 x 1 = 4
 # do it using for loop
 
-table = int(input("Enter which table you want? "))
-for i in range(1, 11):
-    print(table, "x" , i, "=", i * table)    
+# table = int(input("Enter which table you want? "))
+# for i in range(1, 11):
+#     print(table, "x" , i, "=", i * table)
+
+# ask user for name and how many times should it be printed?
+# name = input("Enter your name here: ")
+# times = int(input("How many times do you want to print: "))
+# for i in range(times):
+#     print(name)
+
+# modify the above code to give output as follows:
+# name = input("Enter your name here: ")
+# times = int(input("How many times do you want to print: "))
+# for i in range(times):
+#     print( i+ 1, name )
+
+# print numbers from 1 to 100 that are divisible by
+# both 3 & 5
