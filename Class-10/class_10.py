@@ -90,7 +90,7 @@
 # numbers.reverse();
 # print(numbers);
 
-# Find the average of these numbers
+# Find the average of these two numbers?
 
 # find total price
 # find most expensive
