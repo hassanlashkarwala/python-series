@@ -49,26 +49,38 @@
 # •	Do not hard-code the final totals.
 # •	Extra challenge: keep product names and calculated item totals in lists and use those lists to display the receipt
 
-userProduct = input("Enter your product here: ");
-productPrice = int(input("Enter your product price here: "))
-productQuantity = int(input("Enter your product quantity here: "))
-totalItem = productPrice * productQuantity
-print(totalItem)
+# userProduct = input("Enter your product here: ");
+# productPrice = int(input("Enter your product price here: "))
+# productQuantity = int(input("Enter your product quantity here: "))
+# totalItem = productPrice * productQuantity
+# print(totalItem)
 
-if totalItem >= 10000:
-    discountTenPercent = totalItem * 0.10;
-    finalBill = discountTenPercent;
-    print(totalItem);
-    print(discountTenPercent);
-    print("Discount 10 percent for you, thanks!", finalBill);
-if totalItem >= 5000 and totalItem < 10000:
-    discountFivePercent = totalItem * 0.05;
-    finalBill = discountFivePercent;
-    print(totalItem)
-    print(discountFivePercent);
-    print("Discount 05 percent for you, thanks!", finalBill);
-if totalItem < 5000:
-    print("Discount: 0")
-    print("No discount because your bill is below 5000, thank you!", totalItem);
+# if totalItem >= 10000:
+#     discountTenPercent = totalItem * 0.10;
+#     finalBill = discountTenPercent;
+#     print(totalItem);
+#     print(discountTenPercent);
+#     print("Discount 10 percent for you, thanks!", finalBill);
+# if totalItem >= 5000 and totalItem < 10000:
+#     discountFivePercent = totalItem * 0.05;
+#     finalBill = discountFivePercent;
+#     print(totalItem)
+#     print(discountFivePercent);
+#     print("Discount 05 percent for you, thanks!", finalBill);
+# if totalItem < 5000:
+#     print("Discount: 0")
+#     print("No discount because your bill is below 5000, thank you!", totalItem);
 
-# Not ended, Continue...
+number_of_products = int(input("How many products? "))
+products_names = [];
+total_items = [];
+
+for i in range(number_of_products):
+
+    addProductName = input("Enter your product name here: ");
+    addQuantity = int(input("Enter your product quantity here: "));
+    productPrice = float(input("Enter your product price here: "))
+
+    itemTotal = productPrice * addQuantity;
+    products_names.append(addProductName)
+    total_items.append(itemTotal)
