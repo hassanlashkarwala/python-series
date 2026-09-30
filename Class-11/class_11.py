@@ -71,32 +71,58 @@
 #     print("Discount: 0")
 #     print("No discount because your bill is below 5000, thank you!", totalItem);
 
-number_of_products = int(input("How many products? "))
-products_names = [];
-total_items = [];
+# Solved Question: 01 
+# number_of_products = int(input("How many products? "))
+# products_names = [];
+# total_items = [];
 
-for i in range(number_of_products):
+# for i in range(number_of_products):
 
-    addProductName = input("Enter your product name here: ");
-    addQuantity = int(input("Enter your product quantity here: "));
-    productPrice = float(input("Enter your product price here: "))
+#     addProductName = input("Enter your product name here: ");
+#     addQuantity = int(input("Enter your product quantity here: "));
+#     productPrice = float(input("Enter your product price here: "))
 
-    itemTotal = productPrice * addQuantity;
-    products_names.append(addProductName)
-    total_items.append(itemTotal)
+#     itemTotal = productPrice * addQuantity;
+#     products_names.append(addProductName)
+#     total_items.append(itemTotal)
 
-subtotal = sum(total_items);
-print("This is your total bill", subtotal);
+# subtotal = sum(total_items);
+# print("This is your total bill", subtotal);
 
-if subtotal >= 10000:
-    discount = subtotal * 0.10;
-    print("Your discount of 10%", discount);
-elif subtotal >= 5000 and subtotal < 10000:
-    discount = subtotal * 0.05;
-    print("Your discount of 5%", discount);
-else:
-    discount = 0;
-    print("No discount because your bill is less than 5000", subtotal) 
+# if subtotal >= 10000:
+#     discount = subtotal * 0.10;
+#     print("Your discount of 10%", discount);
+# elif subtotal >= 5000 and subtotal < 10000:
+#     discount = subtotal * 0.05;
+#     print("Your discount of 5%", discount);
+# else:
+#     discount = 0;
+#     print("No discount because your bill is less than 5000", subtotal) 
 
-finalBill = subtotal - discount;
-print("Final Bill: ", finalBill);
+# finalBill = subtotal - discount;
+# print("Final Bill: ", finalBill);
+
+# Question 02
+# Analyze a customer's internet usage for 7 days. Ask the user to enter GB used each day and store the values in a list.
+# Calculate: total weekly usage, average daily usage, highest daily usage, number of heavy-usage days, and weekly category.
+
+userinternetUsage = 7;
+weekDays = [];
+
+for i in range(userinternetUsage):
+    userGb = float(input("Enter your Gb here: "))
+    weekDays.append(userGb)
+print("Weekly Data Usage", weekDays)
+
+subtotal = sum(weekDays)
+print("Total Usage Data", subtotal)
+
+# now we check average data usage each day
+averageUsageData = subtotal / userinternetUsage
+print("Each day average data usage", averageUsageData);
+
+# now we check highest data daily usage
+# highestUsageData = weekDays[0]
+
+# if averageUsageData > 4:
+#     print("Heavy Usage: ")
