@@ -84,3 +84,19 @@ for i in range(number_of_products):
     itemTotal = productPrice * addQuantity;
     products_names.append(addProductName)
     total_items.append(itemTotal)
+
+subtotal = sum(total_items);
+print("This is your total bill", subtotal);
+
+if subtotal >= 10000:
+    discount = subtotal * 0.10;
+    print("Your discount of 10%", discount);
+elif subtotal >= 5000 and subtotal < 10000:
+    discount = subtotal * 0.05;
+    print("Your discount of 5%", discount);
+else:
+    discount = 0;
+    print("No discount because your bill is less than 5000", subtotal) 
+
+finalBill = subtotal - discount;
+print("Final Bill: ", finalBill);
