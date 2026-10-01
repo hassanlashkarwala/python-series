@@ -122,7 +122,24 @@ averageUsageData = subtotal / userinternetUsage
 print("Each day average data usage", averageUsageData);
 
 # now we check highest data daily usage
-# highestUsageData = weekDays[0]
+highestUsageData = weekDays[0];
 
-# if averageUsageData > 4:
-#     print("Heavy Usage: ")
+for userGb in weekDays:
+    if userGb > highestUsageData:
+        highestUsageData = userGb;
+print("Highest gb", highestUsageData)
+
+# now we check heavy data daily usage
+heavy_days = 0
+for userGb in weekDays:
+    if userGb > 4:
+        heavy_days = heavy_days + 1;
+print("Heavy usage data", heavy_days)
+
+# now we can do category section!
+if subtotal <= 15:
+    print("Category: Light")
+elif subtotal > 15 and subtotal <= 30:
+    print("Category: Moderate")
+else:
+    print("Category: Heavy")
