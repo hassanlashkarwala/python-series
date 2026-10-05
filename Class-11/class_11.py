@@ -106,40 +106,70 @@
 # Analyze a customer's internet usage for 7 days. Ask the user to enter GB used each day and store the values in a list.
 # Calculate: total weekly usage, average daily usage, highest daily usage, number of heavy-usage days, and weekly category.
 
-userinternetUsage = 7;
-weekDays = [];
+# userinternetUsage = 7;
+# weekDays = [];
 
-for i in range(userinternetUsage):
-    userGb = float(input("Enter your Gb here: "))
-    weekDays.append(userGb)
-print("Weekly Data Usage", weekDays)
+# for i in range(userinternetUsage):
+#     userGb = float(input("Enter your Gb here: "))
+#     weekDays.append(userGb)
+# print("Weekly Data Usage", weekDays)
 
-subtotal = sum(weekDays)
-print("Total Usage Data", subtotal)
+# subtotal = sum(weekDays)
+# print("Total Usage Data", subtotal)
 
-# now we check average data usage each day
-averageUsageData = subtotal / userinternetUsage
-print("Each day average data usage", averageUsageData);
+# # now we check average data usage each day
+# averageUsageData = subtotal / userinternetUsage
+# print("Each day average data usage", averageUsageData);
 
-# now we check highest data daily usage
-highestUsageData = weekDays[0];
+# # now we check highest data daily usage
+# highestUsageData = weekDays[0];
 
-for userGb in weekDays:
-    if userGb > highestUsageData:
-        highestUsageData = userGb;
-print("Highest gb", highestUsageData)
+# for userGb in weekDays:
+#     if userGb > highestUsageData:
+#         highestUsageData = userGb;
+# print("Highest gb", highestUsageData)
 
-# now we check heavy data daily usage
-heavy_days = 0
-for userGb in weekDays:
-    if userGb > 4:
-        heavy_days = heavy_days + 1;
-print("Heavy usage data", heavy_days)
+# # now we check heavy data daily usage
+# heavy_days = 0
+# for userGb in weekDays:
+#     if userGb > 4:
+#         heavy_days = heavy_days + 1;
+# print("Heavy usage data", heavy_days)
 
-# now we can do category section!
-if subtotal <= 15:
-    print("Category: Light")
-elif subtotal > 15 and subtotal <= 30:
-    print("Category: Moderate")
-else:
-    print("Category: Heavy")
+# # now we can do category section!
+# if subtotal <= 15:
+#     print("Category: Light")
+# elif subtotal > 15 and subtotal <= 30:
+#     print("Category: Moderate")
+# else:
+#     print("Category: Heavy")
+
+# Q:03 
+userFeedback = input("Enter your feedback here: ")
+feedbackLowerStrip = userFeedback.strip().lower();
+print(feedbackLowerStrip)
+# userFeedbackStrip = userFeedback.strip()
+# userFeedbackLower = userFeedback.lower()
+
+vowels = 0
+for char in feedbackLowerStrip:
+    if char == "a" or char == "e" or char == "i" or char == "o" or char == "u":
+        vowels = vowels + 1
+print("Vowels", vowels)
+
+if feedbackLowerStrip == "good but not bad":
+    print("Category: Positive");
+elif feedbackLowerStrip == "bad but not good":
+    print("Category: Negative")
+elif feedbackLowerStrip == "both good and bad":
+    print("Category: Mixed")
+elif feedbackLowerStrip == "neither":
+    print("Neutral")
+
+feedbackSplit = feedbackLowerStrip.split();
+longestWord = feedbackSplit[0]
+
+for i in feedbackSplit:
+    if len(i) > len(longestWord):
+        longestWord = i
+print("Longest word is", longestWord)
