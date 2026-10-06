@@ -145,31 +145,54 @@
 #     print("Category: Heavy")
 
 # Q:03 
-userFeedback = input("Enter your feedback here: ")
-feedbackLowerStrip = userFeedback.strip().lower();
-print(feedbackLowerStrip)
-# userFeedbackStrip = userFeedback.strip()
-# userFeedbackLower = userFeedback.lower()
+# userFeedback = input("Enter your feedback here: ")
+# feedbackLowerStrip = userFeedback.strip().lower();
+# print(feedbackLowerStrip)
+# # userFeedbackStrip = userFeedback.strip()
+# # userFeedbackLower = userFeedback.lower()
 
-vowels = 0
-for char in feedbackLowerStrip:
-    if char == "a" or char == "e" or char == "i" or char == "o" or char == "u":
-        vowels = vowels + 1
-print("Vowels", vowels)
+# vowels = 0
+# for char in feedbackLowerStrip:
+#     if char == "a" or char == "e" or char == "i" or char == "o" or char == "u":
+#         vowels = vowels + 1
+# print("Vowels", vowels)
 
-if feedbackLowerStrip == "good but not bad":
-    print("Category: Positive");
-elif feedbackLowerStrip == "bad but not good":
-    print("Category: Negative")
-elif feedbackLowerStrip == "both good and bad":
-    print("Category: Mixed")
-elif feedbackLowerStrip == "neither":
-    print("Neutral")
+# if feedbackLowerStrip == "good but not bad":
+#     print("Category: Positive");
+# elif feedbackLowerStrip == "bad but not good":
+#     print("Category: Negative")
+# elif feedbackLowerStrip == "both good and bad":
+#     print("Category: Mixed")
+# elif feedbackLowerStrip == "neither":
+#     print("Neutral")
 
-feedbackSplit = feedbackLowerStrip.split();
-longestWord = feedbackSplit[0]
+# feedbackSplit = feedbackLowerStrip.split();
+# longestWord = feedbackSplit[0]
 
-for i in feedbackSplit:
-    if len(i) > len(longestWord):
-        longestWord = i
-print("Longest word is", longestWord)
+# for i in feedbackSplit:
+#     if len(i) > len(longestWord):
+#         longestWord = i
+# print("Longest word is", longestWord)
+
+# Q:04
+employesInformation = [];
+
+for employes in range(2):
+    userName = input("Enter your name here: ")
+    userPresentDay = int(input("Enter your present days here: "))
+    userAbsentDay = int(input("Enter your absent days here: "))
+
+    attendancePercentage = userPresentDay / 20 * 100;
+    if attendancePercentage >= 90:
+        print("your percentage ratio excellent", attendancePercentage);
+    elif attendancePercentage > 75 and attendancePercentage < 90:
+        print("your percentage ratio good", attendancePercentage)
+    else:
+        print("Warning", attendancePercentage)
+    
+    employees = [userName, userPresentDay, userAbsentDay, attendancePercentage]
+    employesInformation.append(employees)
+print(employesInformation)
+
+totalEmployes = len(employesInformation);
+print(totalEmployes)
