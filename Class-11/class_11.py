@@ -177,7 +177,7 @@
 # Q:04
 employesInformation = [];
 
-for employes in range(2):
+for employes in range(5):
     userName = input("Enter your name here: ")
     userPresentDay = int(input("Enter your present days here: "))
     userAbsentDay = int(input("Enter your absent days here: "))
@@ -196,3 +196,35 @@ print(employesInformation)
 
 totalEmployes = len(employesInformation);
 print(totalEmployes)
+
+below75 = 0
+for employees in employesInformation:
+
+    attendance = employees[1] / 20 * 100;
+    if attendance < 75:
+        below75 = below75 + 1
+print("Employees Below 75%: ", below75)
+
+heighestAttendance = employesInformation[0][1] / 20 * 100
+heighestEmployee = employesInformation[0][0]
+        
+for employees in employesInformation:
+    attendance = employees[1] / 20 * 100
+
+    if attendance > heighestAttendance:
+        heighestAttendance = attendance
+        heighestEmployee = employees[0]
+print("Heighest Employee", heighestEmployee)
+print("Heighest attendance", heighestAttendance)
+
+lowestAttendance = employesInformation[0][1] / 20 * 100
+lowestEmployee = employesInformation[0][0]
+
+for employees in employesInformation:
+    attendance = employees[1] / 20 * 100
+
+    if attendance < lowestAttendance:
+        lowestAttendance = attendance
+        lowestEmployee = employees[0]
+print("Lowest Employee", lowestEmployee)
+print("Lowest attendance", lowestAttendance)
