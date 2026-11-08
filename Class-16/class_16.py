@@ -88,7 +88,6 @@
 
 # def myName():
 #     print("Welcome", userName)
-
 # myName()
 
 # def add_three(a, b, c):
@@ -98,3 +97,40 @@
 
 # print(add_three(*numbers))
 # print(type(add_three(*numbers)))
+
+# User default Parameters
+# userCountry = input("Enter your country here: ")
+# userCity = input("Enter your city here: ")
+# def describe_city(city, country= "pakistan"):
+#     return country, city 
+
+# addInfo = describe_city("User Country: " + userCountry,"User City: " + userCity)
+# print(addInfo)
+
+# create a fn analyze_numbers
+# return total, number of even numbers, odd numbers
+
+# numbers = [10, 15, 22, 31, 40, 51]
+# def analyze_number(numbers):
+#     total = 0
+#     even = 0
+#     odd = 0
+#     for loop in numbers:
+#         total += loop
+#         if loop % 2 == 0:
+#             even += 1
+#         else:
+#             odd += 1
+#     return total, even, odd
+
+# total, even, odd = analyze_number(numbers)
+# print(total)
+# print(even)
+# print(odd)
+
+# def calculate_area(length, width):
+#   ''' Calculates and return the area of a rectangle'''
+#   return length * width
+# print(calculate_area(10,5))
+
+# print(calculate_area.__doc__) 
